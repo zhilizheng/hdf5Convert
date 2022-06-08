@@ -1,0 +1,15 @@
+[package]
+name = "hdf5Convert"
+version = "0.1.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "h5ToVCF"
+path = "src/main.rs"
+
+[dependencies]
+hdf5 = "0.8.1"
+ndarray = "0.15.4"
+flate2 = "1.0.22"
