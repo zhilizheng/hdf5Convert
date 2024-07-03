@@ -97,8 +97,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
     
     // write fam  
-    let dt_fam: Vec<String> = ds_fam.read_1d::<FixedAscii<20>>()?.iter().map(|s| format!("{}", String::from(s.as_str())) ).collect();
-    let dt_id: Vec<String> = ds_id.read_1d::<FixedAscii<20>>()?.iter().map(|s| format!("{}", String::from(s.as_str())) ).collect();
+    let dt_fam: Vec<String> = ds_fam.read_1d::<FixedAscii<100>>()?.iter().map(|s| format!("{}", String::from(s.as_str())) ).collect();
+    let dt_id: Vec<String> = ds_id.read_1d::<FixedAscii<100>>()?.iter().map(|s| format!("{}", String::from(s.as_str())) ).collect();
 
     let dt_str = dt_fam.iter().zip(&dt_id).map(|(a, b)| format!("{}_{}", a, b)).collect::<Vec<String>>().join("\t");
 
