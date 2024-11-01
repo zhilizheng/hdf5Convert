@@ -10,6 +10,7 @@ name = "h5ToVCF"
 path = "src/main.rs"
 
 [dependencies]
-hdf5 = "0.8.1"
+hdf5 = {version="0.8.1"}
+hdf5-sys = {version="0.8.1", features = ["static"]}
 ndarray = "0.15.4"
 flate2 = "1.0.22"
